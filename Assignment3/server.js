@@ -20,16 +20,16 @@ app.listen(process.env.PORT || 5003, function (err) {
         console.log(err);
 })
 
-app.use(express.static("../public"))
+app.use(express.static("./public"))
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/public/login.html")
+    res.sendFile(__dirname + "/login.html")
 })
 
 app.get("/pokedex", function(req, res) {
     if (req.session.authenticated) {
         console.log("User Infoaaaaaaaaaaaaaaaaaaaaaaaa" + req.session.current_user)
-        res.sendFile(__dirname + "/public/pokedex.html")
+        res.sendFile(__dirname + "/pokedex.html")
     }
     else {
         res.redirect("/")
