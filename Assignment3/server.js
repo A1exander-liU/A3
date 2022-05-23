@@ -397,4 +397,4 @@ const userModel = mongoose.model("users", userSchema)
 const timelineModel = mongoose.model("timelinevents", timelineSchema); 
 const pokemonModel = mongoose.model("pokemons", pokemonSchema)
 
-app.use("/public", express.static("./public"))
+app.use(express.static("./public"))
