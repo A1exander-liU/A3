@@ -15,7 +15,7 @@ app.use(bodyparser.json());
 var session = require('express-session')
 app.use(session({ secret: 'ssshhhhh', saveUninitialized: true, resave: true }));
 
-app.listen(process.env.PORT || 5003, function (err) {
+app.listen(process.env.PORT || 5007, function (err) {
     if (err)
         console.log(err);
 })
@@ -23,13 +23,13 @@ app.listen(process.env.PORT || 5003, function (err) {
 // app.use(express.static("./public"))
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/login.html")
+    res.sendFile(__dirname + "/public/login.html")
 })
 
 app.get("/pokedex", function(req, res) {
     if (req.session.authenticated) {
         console.log("User Infoaaaaaaaaaaaaaaaaaaaaaaaa" + req.session.current_user)
-        res.sendFile(__dirname + "/pokedex.html")
+        res.sendFile(__dirname + "/public/pokedex.html")
     }
     else {
         res.redirect("/")
@@ -397,4 +397,4 @@ const userModel = mongoose.model("users", userSchema)
 const timelineModel = mongoose.model("timelinevents", timelineSchema); 
 const pokemonModel = mongoose.model("pokemons", pokemonSchema)
 
-app.use(express.static("public"))
+app.use(express.static("./public"))
