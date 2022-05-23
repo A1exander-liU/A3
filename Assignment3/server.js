@@ -20,7 +20,7 @@ app.listen(process.env.PORT || 5003, function (err) {
         console.log(err);
 })
 
-app.use(express.static("./public"))
+// app.use(express.static("./public"))
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "./public/login.html")
@@ -396,3 +396,5 @@ const userSchema = new mongoose.Schema({
 const userModel = mongoose.model("users", userSchema)
 const timelineModel = mongoose.model("timelinevents", timelineSchema); 
 const pokemonModel = mongoose.model("pokemons", pokemonSchema)
+
+app.use(express.static("./public"))
