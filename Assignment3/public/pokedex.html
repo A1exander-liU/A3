@@ -4,6 +4,7 @@
     <script src="https://kit.fontawesome.com/eb31ef5eb4.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -124,7 +125,7 @@
 
         header {
             text-align: center;
-            background-image: url("./public/pokeball.png");
+            background-image: url("/pokeball.png");
             padding: 50px 0;
             display: flex;
             justify-content: center;
@@ -241,7 +242,7 @@
             border-radius: 20px;
         }
 
-        .pokemon_full > div:first-child {
+        .pokemon_full>div:first-child {
             /* background-color: rgb(199, 197, 197); */
             border-radius: 5px;
         }
@@ -296,13 +297,13 @@
         .page-tabs {
             display: grid;
             grid-template-areas: ". . . . "
-                                 ". . . drop";
+                ". . . drop";
             grid-template-columns: 25% 25% 25% 25%;
             grid-template-rows: auto auto;
             margin-bottom: 5%;
         }
 
-        .page-tabs > div {
+        .page-tabs>div {
             display: grid;
             grid-template-columns: 100%;
             grid-template-rows: auto auto;
@@ -416,7 +417,7 @@
             row-gap: 5px;
         }
 
-        #search-criteria > div {
+        #search-criteria>div {
             display: grid;
             grid-template-columns: 75% 25%;
             row-gap: 10px;
@@ -551,7 +552,7 @@
             align-items: center;
         }
 
-        .card-purchase-section > div {
+        .card-purchase-section>div {
             grid-area: 1 / 1 / 2 / 3;
         }
 
@@ -678,18 +679,18 @@
             grid-template-rows: auto auto;
         }
 
-        .purchase-history-card > p {
+        .purchase-history-card>p {
             grid-area: 1 / 1 / 2 / 2;
         }
 
-        .purchase-history-card > i {
+        .purchase-history-card>i {
             grid-area: 1 / 2 / 2 / 3;
             align-self: center;
             justify-self: center;
             border-radius: 100%;
         }
 
-        .purchase-history-card > i:hover {
+        .purchase-history-card>i:hover {
             background-color: rgb(188, 188, 188);
         }
 
@@ -702,14 +703,14 @@
             border-radius: 20px;
             display: grid;
             grid-template-columns: 50% 50%;
-            
+
         }
 
-        .purchase-history-pokemons > p:nth-child(1) {
+        .purchase-history-pokemons>p:nth-child(1) {
             grid-area: 1 / 1 / 2 / 2;
         }
 
-        .purchase-history-pokemons > p:nth-child(2) {
+        .purchase-history-pokemons>p:nth-child(2) {
             grid-area: 1 / 2 / 2 / 3;
         }
 
@@ -725,7 +726,8 @@
             text-align: left;
         }
 
-        #clear-cart, .check-out-cart {
+        #clear-cart,
+        .check-out-cart {
             width: 70%;
             margin: 3px auto;
             background-color: rgb(182, 182, 182);
@@ -733,7 +735,8 @@
             padding: 5px 0;
         }
 
-        #clear-cart:hover, .check-out-cart:hover {
+        #clear-cart:hover,
+        .check-out-cart:hover {
             background-color: rgb(190, 190, 190);
         }
 
@@ -794,10 +797,10 @@
         @media screen and (max-width: 350px) {
             .page-tabs {
                 grid-template-areas: "."
-                                     "."
-                                     "."
-                                     "."
-                                     "drop";
+                    "."
+                    "."
+                    "."
+                    "drop";
                 grid-template-columns: 100%;
                 grid-template-rows: auto auto auto auto auto;
             }
@@ -808,14 +811,13 @@
                 width: 100px;
                 height: 100px;
             }
+
             body {
                 font-size: 0.8em;
             }
         }
     </style>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="code.js"></script>
 </head>
 
 <body>
@@ -833,10 +835,12 @@
             <button class="secondary-tab" id="profile">Profile</button>
         </div>
         <div id="profile-tab">
-            <button class="profile-tabs" id="user_profile"><i class="fa-solid fa-user"></i><span class="user_profile_name" style="border-style: none; color: black;"> User</span></button>
+            <button class="profile-tabs" id="user_profile"><i class="fa-solid fa-user"></i><span
+                    class="user_profile_name" style="border-style: none; color: black;"> User</span></button>
             <button class="profile-tabs" id="favourites"><i class="fa-solid fa-cart-shopping"></i> My Cart</button>
             <button class="profile-tabs" id="timeline"><i class="fa-solid fa-timeline"></i> My Timeline</button>
-            <button class="profile-tabs" id="sign-out"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</button>
+            <button class="profile-tabs" id="sign-out"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign
+                Out</button>
         </div>
     </div>
     <div class="tab-stuff" id="home-page">
@@ -847,7 +851,7 @@
             </div>
         </div>
         <div class="card-info-shop">
-            
+
         </div>
     </div>
     <div class="tab-stuff" id="search-page">
@@ -965,7 +969,7 @@
                 <p class="total"></p>
             </div>
             <div class="check-out-cart">
-                <p><i class="fa-solid fa-cart-shopping"></i> Check out Cart</p> 
+                <p><i class="fa-solid fa-cart-shopping"></i> Check out Cart</p>
             </div>
         </div>
     </div>
@@ -985,8 +989,8 @@
                     <p>Cash Spent</p>
                     <p class="profile-spent-cash" style="color: black; border-style:none;">Number</p>
                 </div>
-            </div>    
-             <div class="purchase-history-container">
+            </div>
+            <div class="purchase-history-container">
                 <h4>Purchase History</h4>
                 <div class="purhcase-history-cards">
                 </div>
@@ -999,7 +1003,8 @@
         <p>Used the <a href="https://www.w3schools.com/howto/howto_js_tabs.asp">horizontal tabs</a> from the W3Schools
             How-To's</p>
     </footer>
-    <script src="./public/code.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/code.js"></script>
 </body>
 
 </html>

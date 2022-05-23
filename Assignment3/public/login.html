@@ -3,6 +3,7 @@
 <head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +19,7 @@
             align-items: center;
             min-height: 100vh;
             font-size: 100%;
-            background-image: url("./public/login_bg.jpg");
+            background-image: url("/login_bg.jpg");
             opacity: 0.9;
         }
 
@@ -38,8 +39,8 @@
             width: 90%;
             margin: auto;
         }
-        
-        #form > div {
+
+        #form>div {
             width: 100%;
             margin: auto;
             display: grid;
@@ -168,14 +169,12 @@
         }
 
         @media screen and (max-width: 200px) {
-            #form > div h2 {
+            #form>div h2 {
                 font-size: 2.25em;
             }
         }
     </style>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="code.js"></script>
 </head>
 
 <body>
@@ -196,11 +195,12 @@
                     <input type="button" class="btn" value="Sign Up">
                 </div>
                 <div id="incorrect-login"></div>
-            </div>    
+            </div>
         </div>
 
     </section>
 </body>
-<script src="./public/code.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/code.js"></script>
 
 </html>
