@@ -20,7 +20,7 @@ app.listen(process.env.PORT || 5003, function (err) {
         console.log(err);
 })
 
-app.use(express.static("./public"))
+app.use(express.static("../public"))
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/login.html")
